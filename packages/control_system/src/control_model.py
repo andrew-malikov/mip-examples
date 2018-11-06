@@ -23,7 +23,7 @@ class ControlModel:
 
             for i in range(0, len(self.manager.channels)):
                 if self.manager.channels[i] < time:
-                    self.manager.channels[i] += time + self.control.next()
+                    self.manager.channels[i] = time + self.control.next()
 
                     is_missed = False
                     break
